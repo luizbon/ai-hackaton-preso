@@ -1,0 +1,13 @@
+{
+  "name": "ai-coding-workflows-preso",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "slides": "npx serve slides -l 4321",
+    "demo:install": "cd demo && npm install"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
