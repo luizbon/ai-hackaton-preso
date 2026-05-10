@@ -1,6 +1,6 @@
 # Speaker Notes — AI Workflows for Coding
 
-**Total target: 6:55. Hard cap: 8:00.**
+**Total target: 7:00. Hard cap: 8:00.**
 
 | # | Slide | Time | Talking points |
 |---|---|---|---|
@@ -12,7 +12,7 @@
 | 6 | The fix | 0:25 | "Reading harder doesn't scale. Rebuild the gates inside your loop." Read the 5 items. |
 | 7 | Demo title | 0:10 | Short pivot. "Let me show you." Switch to Claude Code. |
 | — | **DEMO** | 2:30 | See `demo/DEMO_SCRIPT.md` |
-| 8 | Bake the gates in | 0:25 | "Each step you saw maps to an invokable skill — `brainstorming`, `writing-plans`, `test-driven-development`, `subagent-driven-development`, plus the `code-reviewer` agent. The workflow becomes a muscle, not a checklist." |
+| 8 | Bake the gates in | 0:30 | "Each step is an auto-triggering skill — `brainstorming`, `writing-plans`, `test-driven-development`, `subagent-driven-development`, plus the `code-reviewer` agent. They fire without being asked, so you can't forget to skip the gate. It's all open-source — link's at the bottom." Point at github.com/obra/superpowers. |
 | 9 | Closing | 0:20 | Read both lines slowly. Pause between them. |
 | 10 | Thanks | 0:10 | Open Q&A. |
 
