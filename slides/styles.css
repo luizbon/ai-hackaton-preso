@@ -26,26 +26,26 @@
   background:
     radial-gradient(ellipse at 20% 0%, rgba(255, 209, 102, 0.18), transparent 60%),
     radial-gradient(ellipse at 80% 100%, rgba(76, 201, 240, 0.14), transparent 60%);
-  padding: 1.5em;
+  padding: 0.7em 1em;
   border-radius: 12px;
 }
 .reveal .bg-danger {
   background: radial-gradient(ellipse at center, rgba(239, 71, 111, 0.18), transparent 70%);
-  padding: 1.5em;
+  padding: 0.8em 1em;
   border-radius: 12px;
 }
 .reveal .bg-success {
   background: radial-gradient(ellipse at center, rgba(6, 214, 160, 0.14), transparent 70%);
-  padding: 1.5em;
+  padding: 0.5em 1em 0.6em;
   border-radius: 12px;
 }
 
 /* Hero icons */
 .reveal .hero-icon {
   display: block;
-  margin: 0 auto 0.4em;
-  width: 64px;
-  height: 64px;
+  margin: 0 auto 0.3em;
+  width: 48px;
+  height: 48px;
   filter: drop-shadow(0 0 18px currentColor);
 }
 .reveal .hero-emoji {
@@ -111,30 +111,30 @@
 /* Gate list - card style with numbered badges */
 .reveal .gate-list {
   list-style: none;
-  margin: 1em auto;
+  margin: 0.5em auto;
   padding: 0;
-  max-width: 70%;
+  max-width: 65%;
   counter-reset: gate;
 }
 .reveal .gate-list li {
   counter-increment: gate;
-  margin: 0.35em 0;
-  padding: 0.5em 0.9em 0.5em 2.6em;
+  margin: 0.2em 0;
+  padding: 0.28em 0.8em 0.28em 2.4em;
   background: var(--bg-card);
   border-left: 3px solid var(--accent);
   border-radius: 6px;
   position: relative;
-  font-size: 0.85em;
+  font-size: 0.7em;
   text-align: left;
 }
 .reveal .gate-list li::before {
   content: counter(gate);
   position: absolute;
-  left: 0.55em;
+  left: 0.5em;
   top: 50%;
   transform: translateY(-50%);
-  width: 1.7em;
-  height: 1.7em;
+  width: 1.5em;
+  height: 1.5em;
   border-radius: 50%;
   background: var(--accent);
   color: #000;
@@ -203,10 +203,11 @@
 
 /* Description block on superpowers slide */
 .reveal .desc {
-  font-size: 0.7em;
+  font-size: 0.6em;
   color: var(--text-dim);
-  margin: 0.4em auto 0.6em;
-  max-width: 80%;
+  margin: 0.2em auto 0.4em;
+  max-width: 78%;
+  line-height: 1.35;
 }
 
 /* Title-slide accent strip */
