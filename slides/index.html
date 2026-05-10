@@ -7,28 +7,41 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
+
+        <!-- 1. Title -->
         <section data-transition="fade">
-          <h1 style="font-size: 2.2em;">AI Workflows for Coding</h1>
-          <h3 class="accent" style="margin-top: 0.5em;">How to trust code you didn't write</h3>
-          <p style="margin-top: 2em; opacity: 0.6;">Luiz Bon · 2026</p>
+          <div class="bg-warm">
+            <svg class="hero-icon accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="currentColor" fill-opacity="0.15"/>
+            </svg>
+            <h1 style="font-size: 2.2em; margin: 0;">AI Workflows for Coding</h1>
+            <span class="title-strip"></span>
+            <h3 class="accent" style="margin: 0;">How to trust code you didn't write</h3>
+            <p style="margin-top: 1.6em; opacity: 0.55; font-size: 0.7em;">Luiz Bon · 2026</p>
+          </div>
         </section>
+
+        <!-- 2. Hook -->
         <section>
           <h2 style="font-size: 1.8em;">Coding is changing.</h2>
           <p class="fragment" style="margin-top: 1em;">
             The hard part isn't <span class="strike">writing</span> code anymore.
           </p>
-          <p class="fragment accent" style="margin-top: 0.4em;">
+          <p class="fragment accent" style="margin-top: 0.4em; font-size: 1.15em;">
             It's <strong>trusting</strong> code you didn't write.
           </p>
         </section>
+
+        <!-- 3. Traditional SDLC -->
         <section>
           <h3>How teams have always trusted code</h3>
-          <ol class="gate-list" style="margin-top: 1em;">
+          <ol class="gate-list">
             <li>Planning</li>
             <li>Story refinement</li>
             <li>Spec</li>
@@ -39,13 +52,15 @@
           </ol>
           <p class="takeaway">Each handoff is a <strong>trust gate</strong>.</p>
         </section>
+
+        <!-- 4. The compression -->
         <section>
           <h3>The compression</h3>
           <table class="compression-table">
             <thead>
               <tr>
-                <th>Traditional · days/weeks</th>
-                <th>AI workflow · minutes</th>
+                <th>⏰&nbsp; Traditional · days/weeks</th>
+                <th>⚡&nbsp; AI workflow · minutes</th>
               </tr>
             </thead>
             <tbody>
@@ -59,21 +74,32 @@
           </table>
           <p class="takeaway">The gates didn't disappear. They got compressed.</p>
         </section>
+
+        <!-- 5. Trust problem -->
         <section>
-          <h3>What most devs do</h3>
-          <p style="font-size: 1.4em; margin-top: 1em;">
-            AI writes it &nbsp;→&nbsp; <span class="accent">I skim it</span> &nbsp;→&nbsp; Ship it
-          </p>
-          <p class="fragment takeaway" style="margin-top: 1.5em;">
-            Every gate skipped. No wonder it feels untrustworthy.
-          </p>
+          <div class="bg-danger">
+            <p class="hero-emoji" style="filter: drop-shadow(0 0 14px rgba(239, 71, 111, 0.5));">⚠️</p>
+            <h3>What most devs do</h3>
+            <div class="skip-flow">
+              <span class="step">AI writes it</span>
+              <span class="arrow">→</span>
+              <span class="step danger">I skim it</span>
+              <span class="arrow">→</span>
+              <span class="step">Ship it</span>
+            </div>
+            <p class="fragment takeaway" style="margin-top: 0.8em;">
+              Every gate skipped. No wonder it feels untrustworthy.
+            </p>
+          </div>
         </section>
+
+        <!-- 6. The fix -->
         <section>
           <h3>The fix</h3>
-          <p style="font-size: 1.3em; margin-top: 0.5em;">
+          <p style="font-size: 1.15em; margin-top: 0.4em;">
             Rebuild the gates <span class="accent">inside your loop</span>.
           </p>
-          <ol class="gate-list" style="margin-top: 1.2em; font-size: 0.9em;">
+          <ol class="gate-list" style="font-size: 0.95em; max-width: 55%;">
             <li class="fragment">Spec</li>
             <li class="fragment">Plan</li>
             <li class="fragment">TDD</li>
@@ -81,52 +107,76 @@
             <li class="fragment">Review</li>
           </ol>
         </section>
+
+        <!-- 7. Demo title -->
         <section data-background-color="#1a1a1a">
-          <h2 class="accent">Demo</h2>
-          <p style="font-size: 1.2em; margin-top: 0.5em;">
+          <p class="hero-emoji" style="font-size: 3em;">▶</p>
+          <h2 class="accent" style="margin: 0;">Demo</h2>
+          <p style="font-size: 1.15em; margin-top: 0.4em;">
             One developer. All the gates.
           </p>
-          <p style="margin-top: 2em; opacity: 0.5; font-size: 0.6em;">
+          <p style="margin-top: 1.6em; opacity: 0.45; font-size: 0.6em;">
             Switching to Claude Code →
           </p>
         </section>
+
+        <!-- 8. Bake the gates in (superpowers) -->
         <section>
-          <h3>Bake the gates in</h3>
-          <p style="font-size: 0.9em; margin-top: 0.3em; opacity: 0.7;">
-            What you just saw → invokable skills
-          </p>
-          <table class="compression-table" style="margin-top: 0.6em;">
-            <thead>
-              <tr>
-                <th>Gate</th>
-                <th>Superpower</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Spec</td><td><code>brainstorming</code></td></tr>
-              <tr><td>Plan</td><td><code>writing-plans</code></td></tr>
-              <tr><td>TDD</td><td><code>test-driven-development</code></td></tr>
-              <tr><td>Implement</td><td><code>subagent-driven-development</code></td></tr>
-              <tr><td>Review</td><td><code>code-reviewer</code> agent</td></tr>
-            </tbody>
-          </table>
-          <p class="takeaway">The workflow becomes a <span class="accent">muscle</span>, not a checklist.</p>
+          <div class="bg-success">
+            <svg class="hero-icon green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="currentColor" fill-opacity="0.18"/>
+            </svg>
+            <h3 style="margin: 0;">Bake the gates in</h3>
+            <p class="desc">
+              Each step is an <span class="green">auto-triggering skill</span> — your agent invokes it without being asked. Gates you can't forget to skip.
+            </p>
+            <table class="compression-table" style="font-size: 0.55em; max-width: 80%;">
+              <thead>
+                <tr>
+                  <th>Gate</th>
+                  <th>Superpower</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Spec</td><td><code>brainstorming</code></td></tr>
+                <tr><td>Plan</td><td><code>writing-plans</code></td></tr>
+                <tr><td>TDD</td><td><code>test-driven-development</code></td></tr>
+                <tr><td>Implement</td><td><code>subagent-driven-development</code></td></tr>
+                <tr><td>Review</td><td><code>code-reviewer</code> agent</td></tr>
+              </tbody>
+            </table>
+            <p class="takeaway" style="margin-top: 0.6em;">The workflow becomes a <span class="accent">muscle</span>, not a checklist.</p>
+            <p class="repo-link">
+              Superpowers plugin · <a href="https://github.com/obra/superpowers" target="_blank" rel="noopener">github.com/obra/superpowers</a>
+            </p>
+          </div>
         </section>
+
+        <!-- 9. Closing -->
         <section>
-          <h2 style="font-size: 1.5em;">
+          <h2 style="font-size: 1.45em;">
             You don't trust AI code <br/>by reading it.
           </h2>
-          <p class="fragment accent" style="font-size: 1.2em; margin-top: 1em;">
+          <p class="fragment accent" style="font-size: 1.15em; margin-top: 1em;">
             You trust it through a workflow <br/>that verifies it for you.
           </p>
         </section>
+
+        <!-- 10. Thanks -->
         <section>
-          <h2>Thanks.</h2>
-          <p style="margin-top: 1em;">Questions?</p>
-          <p style="margin-top: 2em; opacity: 0.6; font-size: 0.7em;">
-            Luiz Bon · linkedin.com/in/luizbon
-          </p>
+          <div class="bg-warm">
+            <h2 style="margin: 0;">Thanks.</h2>
+            <span class="title-strip"></span>
+            <p style="margin: 0;">Questions?</p>
+            <p style="margin-top: 1.4em; opacity: 0.55; font-size: 0.65em;">
+              Luiz Bon · linkedin.com/in/luizbon
+            </p>
+            <p class="repo-link" style="margin-top: 0.4em;">
+              Slides &amp; demo: ask in Q&amp;A
+            </p>
+          </div>
         </section>
+
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
