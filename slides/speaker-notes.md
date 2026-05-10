@@ -4,16 +4,16 @@
 
 | # | Slide | Time | Talking points |
 |---|---|---|---|
-| 1 | Title | 0:15 | Greet, name + topic. Don't linger. |
+| 1 | Title | 0:10 | Greet, name + topic. Don't linger. |
 | 2 | Hook | 0:30 | "Coding is changing. The hard part isn't writing code — it's trusting code you didn't write." Pause. |
-| 3 | Traditional SDLC | 0:45 | Walk the list. "Each of these is a TRUST GATE — a different person/role verifying before work moves on." |
+| 3 | Traditional SDLC | 0:25 | Walk the list. "Each of these is a TRUST GATE — a different person/role verifying before work moves on." |
 | 4 | Compression (centerpiece) | 1:30 | THE slide. Walk row by row. Land the takeaway: "The gates didn't disappear — they got compressed and partially automated." |
-| 5 | Trust problem | 0:30 | "Most devs jumped here. AI writes, I skim, ship. That removes EVERY gate at once." |
-| 6 | The fix | 0:30 | "Reading harder doesn't scale. Rebuild the gates inside your loop." Read the 5 items. |
+| 5 | Trust problem | 0:20 | "Most devs jumped here. AI writes, I skim, ship. That removes EVERY gate at once." |
+| 6 | The fix | 0:25 | "Reading harder doesn't scale. Rebuild the gates inside your loop." Read the 5 items. |
 | 7 | Demo title | 0:10 | Short pivot. "Let me show you." Switch to Claude Code. |
 | — | **DEMO** | 2:30 | See `demo/DEMO_SCRIPT.md` |
-| 8 | Closing | 0:30 | Read both lines slowly. Pause between them. |
-| 9 | Thanks | 0:20 | Open Q&A. |
+| 8 | Closing | 0:20 | Read both lines slowly. Pause between them. |
+| 9 | Thanks | 0:10 | Open Q&A. |
 
 ## Cuts (if running long)
 
