@@ -14,4 +14,30 @@ describe('verifyToken', () => {
 
     expect(payload).toMatchObject({ sub: 'user-1', role: 'admin' });
   });
+
+  it('throws JsonWebTokenError when the signature is tampered', () => {
+    const token = jwt.sign({ sub: 'user-1' }, SECRET, { algorithm: 'HS256' });
+    const tampered = token.slice(0, -1) + (token.endsWith('A') ? 'B' : 'A');
+
+    expect(() => verifyToken(tampered, SECRET)).toThrow(jwt.JsonWebTokenError);
+  });
+
+  it('throws TokenExpiredError when the token is expired', () => {
+    const token = jwt.sign({ sub: 'user-1' }, SECRET, {
+      algorithm: 'HS256',
+      expiresIn: '-1s',
+    });
+
+    expect(() => verifyToken(token, SECRET)).toThrow(jwt.TokenExpiredError);
+  });
+
+  it('throws JsonWebTokenError when the secret is wrong', () => {
+    const token = jwt.sign({ sub: 'user-1' }, SECRET, { algorithm: 'HS256' });
+
+    expect(() => verifyToken(token, 'wrong-secret')).toThrow(jwt.JsonWebTokenError);
+  });
+
+  it('throws JsonWebTokenError when the token is malformed', () => {
+    expect(() => verifyToken('not.a.jwt', SECRET)).toThrow(jwt.JsonWebTokenError);
+  });
 });
