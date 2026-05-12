@@ -40,4 +40,19 @@ describe('verifyToken', () => {
   it('throws JsonWebTokenError when the token is malformed', () => {
     expect(() => verifyToken('not.a.jwt', SECRET)).toThrow(jwt.JsonWebTokenError);
   });
+
+  it('throws when the token is signed with alg: none', () => {
+    // jwt.sign with algorithm 'none' requires passing null as secret.
+    const token = jwt.sign({ sub: 'user-1' }, null as unknown as string, {
+      algorithm: 'none',
+    });
+
+    expect(() => verifyToken(token, SECRET)).toThrow(jwt.JsonWebTokenError);
+  });
+
+  it('throws when the token is signed with HS512 (not in allow-list)', () => {
+    const token = jwt.sign({ sub: 'user-1' }, SECRET, { algorithm: 'HS512' });
+
+    expect(() => verifyToken(token, SECRET)).toThrow(jwt.JsonWebTokenError);
+  });
 });
