@@ -55,4 +55,11 @@ describe('verifyToken', () => {
 
     expect(() => verifyToken(token, SECRET)).toThrow(jwt.JsonWebTokenError);
   });
+
+  it('throws JsonWebTokenError when the payload is a string, not an object', () => {
+    const token = jwt.sign('plain-string-payload', SECRET, { algorithm: 'HS256' });
+
+    expect(() => verifyToken(token, SECRET)).toThrow(jwt.JsonWebTokenError);
+    expect(() => verifyToken(token, SECRET)).toThrow(/payload must be an object/);
+  });
 });
